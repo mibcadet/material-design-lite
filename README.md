@@ -128,6 +128,17 @@ the templates local testing overrides. In this case make sure you run the
 `templates:localtestingoverride` gulp task again or modify the `watch()`
 function in the gulp file.
 
+## When using with Meteor
+If you work on Meteor with Google MDL to use template.<templateName>.events you have to avoid using MDL classes in top level DIV in your HTML template.
+correct example:
+<template name="example">
+  <div class="customClass">
+    <div class="mdl-grid">
+     #sth
+    </div>
+  </div>
+</template>
+
 ## Versioning
 
 For transparency into our release cycle and in striving to maintain backward
